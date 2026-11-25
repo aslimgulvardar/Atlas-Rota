@@ -6,7 +6,7 @@
   <title>Atlas Rota | Butik Seyahat Stüdyosu</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -21,7 +21,7 @@
           <li><a href="#rotalar">Rotalar</a></li>
           <li><a href="#yorumlar">Yorumlar</a></li>
           <!-- BUG: kapanmamış tırnak işareti, bu satırdan sonraki tüm HTML'i bozar -->
-          <li><a href="#iletisim>İletişim</a></li>
+          <li><a href="#iletisim">İletişim</a></li>
         </ul>
       </nav>
     </div>
@@ -30,12 +30,16 @@
   <!-- ============ HERO ============ -->
   <section class="hero" id="anasayfa">
     <!-- BUG: img etiketinde alt özniteliği eksik (erişilebilirlik hatası) -->
-    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80" class="hero__bg">
+    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80" class="hero__bg" alt="Doğa ve dağ manzarası">
     <div class="hero__overlay"></div>
     <div class="container hero__content">
       <p class="eyebrow">03 KIŞI · 14 GÜN · 2 KITA</p>
-      <h1>Haritanın<br>Dışına Çık</h1>
-      <p class="hero__desc">Atlas Rota, kalabalık turlardan uzak, gerçek rotalarda küçük gruplarla ilerleyen bir keşif stüdyosudur.</p>
+     <h1>Dünyayı Keşfet,<br>Hikayeni Sen Yaz.</h1>
+      <p class="hero__desc">
+    Yeni yerler, unutulmaz anılar ve keşfedilmeyi
+    bekleyen eşsiz rotalar. Dünyaya kendi
+    adımlarınla iz bırak.
+     </p>
       <a href="#rotalar" class="btn btn-primary">Rotaları Keşfet</a>
     </div>
   </section>
@@ -46,7 +50,7 @@
       <!-- BUG: bu div hiç kapatılmıyor, sayfanın geri kalanının yerleşimini bozar -->
       <div class="about__image">
         <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=900&q=80" alt="Dağ yolunda yürüyen gezginler">
-
+      </div> 
       <div class="about__text">
         <span class="label">01 — Biz Kimiz</span>
         <h2>Rehberlik değil, rota ortaklığı</h2>
@@ -130,6 +134,17 @@
             <p>14 gün · Zorlu</p>
           </div>
         </article>
+        <article class="route-card">
+    <span class="stamp">TR · 15</span>
+
+    <img src="https://hayatveseyahat.com/wp-content/uploads/2025/03/kapadokya-2-scaled.jpg"
+     alt="Kapadokya'da gün doğumu ve balonlar">
+
+    <div class="route-card__body">
+        <h3>Kapadokya'nın Büyüsü</h3>
+        <p>4 gün · Kolay</p>
+    </div>
+ </article>
 
       </div>
     </div>
@@ -176,7 +191,7 @@
 
         <label for="email">E-posta</label>
         <!-- BUG: name özniteliği eksik, form verisi düzgün gönderilmez -->
-        <input type="email" id="email" placeholder="ornek@mail.com">
+        <input type="email" id="email"  name="email" placeholder="ornek@mail.com">
 
         <label for="message">Mesaj</label>
         <textarea id="message" name="message" placeholder="Rota hakkında ne merak ediyorsun?"></textarea>
